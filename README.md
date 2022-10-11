@@ -7,7 +7,7 @@ Set parameters in `config.ini` based on password requirements.
 
 **Configuration parameters**:
 ```
-min.          (int) Minimum length of password
+min           (int) Minimum length of password
 numeric       (int) Number of numeric characters
 upper         (int) Number of uppercase characters
 lower         (int) Number of lowercase characters
