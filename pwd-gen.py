@@ -10,9 +10,12 @@ from string import punctuation
 load_dotenv()
 
 # Read parameters from .env
-MIN_LENGTH = int(os.getenv('MIN_LENGTH', 10))
-MAX_LENGTH = int(os.getenv('MAX_LENGTH', 64))
-SPECIAL_CHARACTERS = os.getenv('SPECIAL_CHARACTERS', punctuation)
+try:
+    MIN_LENGTH = int(os.getenv('MIN_LENGTH', 10))
+    MAX_LENGTH = int(os.getenv('MAX_LENGTH', 64))
+except ValueError:
+    print("Error: MIN_LENGTH and MAX_LENGTH must be integers.")
+    exit(1)
 
 def generate_password() -> str:
     length = max(MIN_LENGTH, MAX_LENGTH)
