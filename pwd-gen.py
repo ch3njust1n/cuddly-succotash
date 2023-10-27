@@ -13,6 +13,13 @@ CHARACTER_SET.extend(ascii_lowercase)
 CHARACTER_SET.extend(ascii_uppercase)
 CHARACTER_SET.extend(digits)
 
+try:
+    MIN_LENGTH = int(os.getenv('MIN_LENGTH', 10))
+    MAX_LENGTH = int(os.getenv('MAX_LENGTH', 64))
+except ValueError:
+    print("Error: MIN_LENGTH and MAX_LENGTH must be integers.")
+    exit(1)
+
 
 '''
 inputs:
