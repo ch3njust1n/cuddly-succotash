@@ -1,6 +1,3 @@
-"""
-Script for generating passwords locally.
-"""
 import os
 import random
 from dotenv import load_dotenv
@@ -10,9 +7,9 @@ from string import punctuation
 load_dotenv()
 
 # Read parameters from .env
-MIN_LENGTH = int(os.getenv('MIN_LENGTH', 10))
-MAX_LENGTH = int(os.getenv('MAX_LENGTH', 64))
-SPECIAL_CHARACTERS = os.getenv('SPECIAL_CHARACTERS', punctuation)
+# MIN_LENGTH = int(os.getenv('MIN_LENGTH', 10))
+# MAX_LENGTH = int(os.getenv('MAX_LENGTH', 64))
+# SPECIAL_CHARACTERS = os.getenv('SPECIAL_CHARACTERS', punctuation)
 
 def generate_password() -> str:
     length = max(MIN_LENGTH, MAX_LENGTH)
