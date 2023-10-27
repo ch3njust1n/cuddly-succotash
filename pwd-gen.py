@@ -1,3 +1,6 @@
+"""
+Script for generating passwords locally.
+"""
 import os
 import random
 from dotenv import load_dotenv
