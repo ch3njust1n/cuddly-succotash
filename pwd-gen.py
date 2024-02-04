@@ -17,6 +17,8 @@ except ValueError:
     print("Error: MIN_LENGTH and MAX_LENGTH must be integers.")
     exit(1)
 
+SPECIAL_CHARACTERS = punctuation
+
 def generate_password() -> str:
     length = max(MIN_LENGTH, MAX_LENGTH)
     password = [
